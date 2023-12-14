@@ -16,7 +16,7 @@ public class ReplaceWithOccurance {
                 sb.append(str.charAt(i));
             }
         }
-        System.out.println(sb);
+        System.out.println();
     }
     public static void main(String[] args) {
         replace("Hello", 'l');
