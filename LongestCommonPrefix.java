@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
         if(strs.length==1)
