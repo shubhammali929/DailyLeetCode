@@ -7,37 +7,22 @@ public class IsomorphicStrings205 {
         for(int i=0; i<s.length(); i++)
         {
             if(! mp.containsKey(s.charAt(i))){
-                mp.put(s.charAt(i),t.charAt(i));
+                if(! mp.containsValue(t.charAt(i)))
+                    mp.put(s.charAt(i),t.charAt(i));
+                else
+                    return false;
             }else{
                 if(mp.get(s.charAt(i))!=t.charAt(i))
                     return false;
             }
         }
-        Map<Character, Character> mp2 = new HashMap<>();
-        for(int i=0; i<s.length(); i++)
-        {
-            if(! mp2.containsKey(t.charAt(i))){
-                mp2.put(t.charAt(i),s.charAt(i));
-            }else{
-                if(mp2.get(t.charAt(i))!=s.charAt(i))
-                    return false;
-            }
-        }
-        // System.out.println(mp);
-        // System.out.println(mp2);
-        String news ="";
-        String news2 = "";
+        
+        System.out.println(mp);
         for(int i=0; i<s.length(); i++){
-            news += mp.get(s.charAt(i));
+            if(mp.get(s.charAt(i))!=t.charAt(i))
+                return false;
         }
-        for(int i=0; i<s.length(); i++){
-            news2 += mp2.get(t.charAt(i));
-        }
-        // System.out.println("Result-->"+news);
-        // System.out.println("Result2-->"+news2);
-        if(news.equals(t) && news2.equals(s))
-            return true;
-        return false;
+        return true;
     }
     public static void main(String[] args) {
         System.out.println(isIsomorphic("egg","add"));
