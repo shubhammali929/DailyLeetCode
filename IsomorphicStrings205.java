@@ -14,13 +14,7 @@ public class IsomorphicStrings205 {
             }else{
                 if(mp.get(s.charAt(i))!=t.charAt(i))
                     return false;
-            }
-        }
-        
-        System.out.println(mp);
-        for(int i=0; i<s.length(); i++){
-            if(mp.get(s.charAt(i))!=t.charAt(i))
-                return false;
+            }   
         }
         return true;
     }
