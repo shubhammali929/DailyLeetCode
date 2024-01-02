@@ -1,22 +1,17 @@
 // UNSOLVED
+
+import java.util.*;
+
 public class RemoveDuplicatesFromArray {
-    public static int[] removeDuplicates(int[] nums) {
-        int[] arr = new int[nums.length];
-        int index = 0;
-        for(int i=0; i<nums.length-1; i++)
-        {
-            if(i==nums.length-2){
-                arr[index] = nums[i+1];
+    public static int removeDuplicates(int[] nums) {
+        int index=0;
+        for(int j=1;j<nums.length;j++){
+            if(nums[index]!=nums[j]){
                 index++;
-            }//for last two numbers
-            if(nums[i]==nums[i+1])
-                continue;
-            else{
-                arr[index] = nums[i];
-                index++;
+                nums[index]=nums[j];
             }
         }
-        return arr;
+        return index+1;
     }
     public static void printArray(int[] arr)
     {
@@ -26,9 +21,10 @@ public class RemoveDuplicatesFromArray {
         }
     }
     public static void main(String[] args) {
-        int[] nums = {1,1,2,2};
-        int[] res = removeDuplicates(nums);
-        printArray(res);
+        int[] nums = {1,1,2};
+        int res = removeDuplicates(nums);
+        // printArray(res);
+        System.out.println(res);
 
     }
 }

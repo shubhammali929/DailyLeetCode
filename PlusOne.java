@@ -19,6 +19,14 @@ public class PlusOne {
             }
             
         }
+        int[] digits2 = new int[digits.length+1];
+        if(digits[0]==9){
+            for(int i=0; i<digits.length; i++)
+            {
+                digits[i+1] = digits[i];
+            }
+            return digits2;
+        }
         return digits;
     }
     public static void printArr(int[] arr)
