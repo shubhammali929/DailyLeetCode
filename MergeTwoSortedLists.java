@@ -3,11 +3,14 @@ class ListNode {
       ListNode next;
       ListNode() {}
       ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+      ListNode(int val, ListNode next){ this.val = val; this.next = next; }
   }
 public class MergeTwoSortedLists {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        
+    // public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static void mergeTwoLists(ListNode list1, ListNode list2) {
+        while(list.next){
+            
+        }
 
         
     }
