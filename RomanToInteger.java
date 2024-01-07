@@ -13,7 +13,7 @@ public class RomanToInteger {
 
         for(int i=0; i<s.length(); i++)
         {
-            if(i==s.length()-1){
+            if(i==s.length()-1){ //if string contains only one character
                 res+=mp.get(s.charAt(i));
                 return res;
             }
