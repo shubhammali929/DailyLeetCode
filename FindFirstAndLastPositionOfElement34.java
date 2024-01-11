@@ -1,3 +1,4 @@
+// pending ...
 public class FindFirstAndLastPositionOfElement34 {
     public static int[] searchRange(int[] nums, int target) {
         int start = -1;
