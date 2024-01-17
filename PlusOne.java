@@ -1,33 +1,15 @@
 public class PlusOne {
     public static int[] plusOne1(int[] digits) {
-        int carry = 0;
-        if(digits.length==1 && digits[0]==9){
-            int[] digits2 = {1,0};
-            return digits2;
-        }
-        for (int i = digits.length - 1; i >= 0; i--) {
-            if (carry == 1) {
+        for(int i=digits.length-1; i>=0; i--){
+            if(digits[i]<9){
                 digits[i]++;
-                carry = 0;
+                return digits;
             }
-            if(i==digits.length-1 && digits[i] != 9){
-                digits[i]++;
-            }
-            if(i==digits.length-1 && digits[i]==9){
-                carry = 1;
-                digits[i] = 0;
-            }
-            
+            digits[i]=0;
         }
         int[] digits2 = new int[digits.length+1];
-        if(digits[0]==9){
-            for(int i=0; i<digits.length; i++)
-            {
-                digits[i+1] = digits[i];
-            }
-            return digits2;
-        }
-        return digits;
+        digits2[0]=1;
+        return digits2;
     }
     public static void printArr(int[] arr)
     {
