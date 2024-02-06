@@ -42,12 +42,22 @@ public class Recursion {
             return 1;
         return n* calcPower(n, p-1);
     }
+    public static boolean checkPrime2(int num, int i){
+        if (i > num/2)
+            return true;
+        if(num%i == 0)
+            return false;
+        i++;
+        return checkPrime2(num, i);
+    }
     public static void main(String[] args) {
         // print1to10(4);
         // calcSum(0, 3, 0);
         // printFactorial(5, 5, 1);
         // System.out.println(printFactorial2(3));
         // printFibSeries(0,1,9);
-        System.out.println(calcPower(2, 5));
+        // System.out.println(calcPower(2, 5));
+        System.out.println(checkPrime2(24, 2));
+
     }
 }
